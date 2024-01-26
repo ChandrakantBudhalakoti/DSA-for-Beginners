@@ -20,6 +20,10 @@ public class ArrayCreation {
         System.out.println("marks -> " + marks [0]);
         //4. Update
         marks [0] = 100;
+        randomNumbers[0] = 89;
+        fruits[3] = "papaya";
+        numbers[0] = 89;
         System.out.println("marks after update -> " + marks[0]);
+        sc.close();
     }
 }
