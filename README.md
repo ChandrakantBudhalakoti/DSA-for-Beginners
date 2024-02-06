@@ -42,5 +42,5 @@ This repository is open-source and available under the [MIT License](LICENSE). F
 
 Happy coding, and let's learn DSA together!
 <br>
-THANK YOU !!!
+THANK YOU !!! <3
 
