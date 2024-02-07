@@ -1,3 +1,4 @@
+// for a given String convert each the first letter of word to uppercase
 package Strings;
 
 public class ConvertFirstletterToUppercase {
