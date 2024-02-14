@@ -3,6 +3,7 @@
  * Set ith Bit
  * clear ith Bit
  * update ith bit
+ * clearLastIthBit
  */
 package BitManipulation;
 
@@ -50,6 +51,6 @@ public class BitManipulationOperations {
         System.out.println("Set ith Bit "+setIthBit(10, 2));
         System.out.println("clear ith Bit "+clearIthBit(10, 1));
         System.out.println("Update ith Bit "+updateIthBit(10, 2, 1));
-        System.out.println("Clear Last Bit "+clearLastIthBit(15,2));
+        System.out.println("Clear Last Bit "+clearLastIthBit(10,2));
     }
 }
