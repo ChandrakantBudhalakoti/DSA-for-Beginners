@@ -1,5 +1,5 @@
 // Java program to illustrate the concept of inheritance
-
+// learning inheritance 
 // Base class (Parent class)
 class Animal {
     void eat() {
