@@ -14,6 +14,7 @@ public class Abstraction {
         c.walk();
         c.changeColor();
         System.out.println(c.color);
+        
     }
 
 }
