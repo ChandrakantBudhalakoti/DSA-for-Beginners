@@ -9,5 +9,27 @@
  * variable in the interface are final, public and static 
  */
 public class Interface {
+    public static void main(String[] args) {
+        Queen queen = new Queen();
+        queen.moves();
+    }
     
+}
+interface ChessPlayer{
+    void moves();  //Declare a method called "moves".
+}
+class Queen implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, left, right and diagonal (in all directions)");
+    }
+}
+class Rook implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, left and right ");
+    }
+}
+class King implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, left, right and diagonal (by 1 step)");
+    }
 }
