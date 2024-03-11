@@ -52,10 +52,18 @@ public class Recursion {
         return sn;
     }
 
-    //Problem 3: Print Nth Fibbonacci number
-    
+    // Problem 3: Print Nth Fibbonacci number
+    public static int fib(int n){
+        if(n == 0 || n ==1){
+            return n;
+        }
+        int fnm1 = fib(n-1);
+        int fnm2 = fib(n-2);
+        int fn = fnm1 + fnm2;
+        return fn;
+    }
     public static void main(String[] args) {
-        int n = 5;
+        int n = 10;
         System.out.print("Decreasing Order: ");
         printDec(n);
         System.out.println();
@@ -65,5 +73,6 @@ public class Recursion {
         // System.out.println("Factorial of n");
         System.out.println("Factorial of " + n + "! = " + factorial(n));
         System.out.println("Sum of first " + n + " natural numbers = " + sum(n));
+        System.out.println("The " + n + "-th Fibonacci Number = " + fib(n));
     }
 }
