@@ -42,7 +42,7 @@ public class Recursion {
         return fn;
     }
 
-    // Problem 3: Print sum of first n natural numbers
+    // Problem 4: Print sum of first n natural numbers
     public static int sum(int n) {
         if (n == 1) {
             return 1;
@@ -52,16 +52,28 @@ public class Recursion {
         return sn;
     }
 
-    // Problem 3: Print Nth Fibbonacci number
-    public static int fib(int n){
-        if(n == 0 || n ==1){
+    // Problem 5: Print Nth Fibbonacci number
+    public static int fib(int n) {
+        if (n == 0 || n == 1) {
             return n;
         }
-        int fnm1 = fib(n-1);
-        int fnm2 = fib(n-2);
+        int fnm1 = fib(n - 1);
+        int fnm2 = fib(n - 2);
         int fn = fnm1 + fnm2;
         return fn;
     }
+
+    // Problem 6: Check if a given array is sorted or not
+    public static boolean isSorted(int[] arr, int i) {
+        if (i == arr.length - 1) {
+            return true;
+        }
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+        return isSorted(arr, i + 1);
+    }
+
     public static void main(String[] args) {
         int n = 10;
         System.out.print("Decreasing Order: ");
@@ -74,5 +86,7 @@ public class Recursion {
         System.out.println("Factorial of " + n + "! = " + factorial(n));
         System.out.println("Sum of first " + n + " natural numbers = " + sum(n));
         System.out.println("The " + n + "-th Fibonacci Number = " + fib(n));
+        int[] arr = { 1, 2, 3, 4 };
+        System.out.println(isSorted(arr, 0));
     }
 }
