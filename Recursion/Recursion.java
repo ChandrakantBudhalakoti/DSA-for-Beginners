@@ -74,6 +74,16 @@ public class Recursion {
         return isSorted(arr, i + 1);
     }
 
+    //Problem 7: write a function to find the first occrurence of an element in an array
+    public static int findElement(int[] arr, int key, int i) {
+        if(i == arr.length ) {
+            return -1;
+        }
+        if(arr[i] ==key){
+            return i;
+        }
+        return findElement(arr, key, i+1);
+    }
     public static void main(String[] args) {
         int n = 10;
         System.out.print("Decreasing Order: ");
@@ -86,7 +96,8 @@ public class Recursion {
         System.out.println("Factorial of " + n + "! = " + factorial(n));
         System.out.println("Sum of first " + n + " natural numbers = " + sum(n));
         System.out.println("The " + n + "-th Fibonacci Number = " + fib(n));
-        int[] arr = { 1, 2, 3, 4 };
+        int[] arr = {8,3,6,9,5,10};
         System.out.println(isSorted(arr, 0));
+        System.out.println(findElement(arr, 5, 0));
     }
 }
