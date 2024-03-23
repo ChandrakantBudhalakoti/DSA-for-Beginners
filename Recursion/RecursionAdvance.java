@@ -14,5 +14,8 @@ public class RecursionAdvance {
         int totalWays = fnm1 + fnm2;
         return totalWays;
     }
+    public static void main(String[] args) {
+        System.out.println("Number of ways to tile a room with n tiles is : "+tillingProblem(4));
+    }
     
 }
