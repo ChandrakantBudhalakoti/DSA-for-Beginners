@@ -74,28 +74,59 @@ public class Recursion {
         return isSorted(arr, i + 1);
     }
 
-    //Problem 7: write a function to find the first occrurence of an element in an array
+    // Problem 7: write a function to find the first occrurence of an element in an
+    // array
     public static int findElement(int[] arr, int key, int i) {
-        if(i == arr.length ) {
+        if (i == arr.length) {
             return -1;
         }
-        if(arr[i] ==key){
+        if (arr[i] == key) {
             return i;
         }
-        return findElement(arr, key, i+1);
+        return findElement(arr, key, i + 1);
     }
-    // Problem 8: Write a function to find the last occrurence of an element in an array
-    public static int findLastElement(int [] arr, int key,int i){
-        //base case
-        if(i == arr.length){
+
+    // Problem 8: Write a function to find the last occrurence of an element in an
+    // array
+    public static int findLastElement(int[] arr, int key, int i) {
+        // base case
+        if (i == arr.length) {
             return -1;
         }
-        int isFound = findLastElement(arr , key , i+1 );
-        if(isFound == -1 && arr[i] == key){
-            return i ;
+        int isFound = findLastElement(arr, key, i + 1);
+        if (isFound == -1 && arr[i] == key) {
+            return i;
         }
         return isFound;
     }
+
+    // Problem 9: Print x ^ n
+    public static int power(int x, int n) {
+        //base case
+        if (n == 0) {
+            return 1;
+        }
+        //recursive case
+        return x * power(x, n - 1);
+    }
+
+    // Problem 10: Print x ^ n in O(log n)
+    public static int power2(int a, int n) {
+        //base case
+        if (n == 0) {
+            return 1;
+        }
+        //recursive case
+        int halfPow = power2(a, n/2);
+        int halfPowSq = halfPow * halfPow;
+        //int halfPowSq = power2(a, n/2) * power2(a, n/2);
+        //if n is odd number
+        if (n % 2 != 0) {
+            halfPowSq = a * halfPowSq;
+        }
+        return halfPowSq;
+    }
+
     public static void main(String[] args) {
         int n = 10;
         System.out.print("Decreasing Order: ");
@@ -108,9 +139,11 @@ public class Recursion {
         System.out.println("Factorial of " + n + "! = " + factorial(n));
         System.out.println("Sum of first " + n + " natural numbers = " + sum(n));
         System.out.println("The " + n + "-th Fibonacci Number = " + fib(n));
-        int[] arr = {8,3,6,5,9,5,10};
+        int[] arr = { 8, 3, 6, 5, 9, 5, 10 };
         System.out.println(isSorted(arr, 0));
         System.out.println(findElement(arr, 5, 0));
         System.out.println(findLastElement(arr, 5, 0));
+        System.out.println(power(2, 10));
+        System.out.println(power2(2, 10));
     }
 }
