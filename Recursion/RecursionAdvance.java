@@ -10,6 +10,7 @@ public class RecursionAdvance {
         //recursive case
         //if vertical direction choice
         int fnm1 = tillingProblem(n-1);
+        //if horizontal direction choice
         int fnm2 = tillingProblem(n-2);
         int totalWays = fnm1 + fnm2;
         return totalWays;
