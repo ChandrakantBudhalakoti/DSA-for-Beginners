@@ -84,6 +84,18 @@ public class Recursion {
         }
         return findElement(arr, key, i+1);
     }
+    // Problem 8: Write a function to find the last occrurence of an element in an array
+    public static int findLastElement(int [] arr, int key,int i){
+        //base case
+        if(i == arr.length){
+            return -1;
+        }
+        int isFound = findLastElement(arr , key , i+1 );
+        if(isFound == -1 && arr[i] == key){
+            return i ;
+        }
+        return isFound;
+    }
     public static void main(String[] args) {
         int n = 10;
         System.out.print("Decreasing Order: ");
@@ -96,8 +108,9 @@ public class Recursion {
         System.out.println("Factorial of " + n + "! = " + factorial(n));
         System.out.println("Sum of first " + n + " natural numbers = " + sum(n));
         System.out.println("The " + n + "-th Fibonacci Number = " + fib(n));
-        int[] arr = {8,3,6,9,5,10};
+        int[] arr = {8,3,6,5,9,5,10};
         System.out.println(isSorted(arr, 0));
         System.out.println(findElement(arr, 5, 0));
+        System.out.println(findLastElement(arr, 5, 0));
     }
 }
