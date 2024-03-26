@@ -57,12 +57,27 @@ public class RecursionAdvance {
         /* return friendsPairing(n- 1) + (n-1) * friendsPairing(n-2); */
     }
 
+    // Problem 14: Print Binary String
+    public static void printBinaryString(int n, int lastPlace, String str) {
+        // base case
+        if (n == 0) {
+            System.out.println(str);
+            return;
+        }
+        // recursive case
+        printBinaryString(n - 1, 0, str + "0");
+        if (lastPlace == 0) {
+            printBinaryString(n - 1, 1, str + "1");
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Number of ways to tile a room with n tiles is : " + tillingProblem(4));
         String str = "appnnacollege";
         boolean[] map = new boolean[26];// assuming only lowercase alphabets are there in string
         removeDuplicateStrings(str, 0, new StringBuilder(), map);
         System.out.println(friendsPairing(3));
+        printBinaryString(3, 0, " ");
     }
 
 }
