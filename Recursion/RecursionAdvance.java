@@ -34,11 +34,28 @@ public class RecursionAdvance {
             removeDuplicateStrings(str, idx+1, newStr.append(currentChar), map);
         }
     }
+    //Problem 3: Friends Pairing problem
+    public static int friendsPairing(int n){
+        //base case 
+        if(n==1 || n==2){
+            return n;
+        }
+        //recursive case
+        //if single choice
+        int fnm1 = friendsPairing(n-1);
+        //if pairs choice
+        int fnm2 = friendsPairing(n-2);
+        int pairsways = (n-1) * fnm2;
+        //totalWays 
+        int totalWays = fnm1 + pairsways;
+        return totalWays;
+    }
     public static void main(String[] args) {
         System.out.println("Number of ways to tile a room with n tiles is : "+tillingProblem(4));
         String str = "appnnacollege";
         boolean[] map = new boolean[26];//assuming only lowercase alphabets are there in string
         removeDuplicateStrings(str, 0, new StringBuilder(), map);
+        System.out.println(friendsPairing(3));
     }
     
 }
