@@ -71,6 +71,18 @@ public class RecursionAdvance {
         }
     }
 
+    // Pronlem 15: Tower Of Hanoi
+    public static void towerOfHanoi(int n, String src, String helper, String dest) {
+        if (n == 1) {
+            System.out.println("Move disk " + n + " from " + src + " to " + dest);
+            return;
+        }
+        towerOfHanoi(n - 1, src, dest, helper);
+        System.out.println("Move disk " + n + " from " + src + " to " + dest);
+        towerOfHanoi(n - 1, helper, src, dest);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Number of ways to tile a room with n tiles is : " + tillingProblem(4));
         String str = "appnnacollege";
@@ -78,6 +90,7 @@ public class RecursionAdvance {
         removeDuplicateStrings(str, 0, new StringBuilder(), map);
         System.out.println(friendsPairing(3));
         printBinaryString(3, 0, " ");
+        towerOfHanoi(3, "S", "H", "D");
     }
 
 }
