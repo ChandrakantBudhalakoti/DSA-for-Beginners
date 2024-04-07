@@ -1,7 +1,7 @@
 package BackTracking;
 
 public class NQueenProblem {
-    // all posible combination for queens safe location
+    // all possible combination for queens safe location
     public static boolean isSafe(char board[][], int row, int col) {
         // vertical up
         for (int i = row - 1; i >= 0; i--) {
