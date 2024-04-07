@@ -26,14 +26,14 @@ public class NQueenProblem {
 
     public static void nQueen(char board[][], int row) {
         // base case
-        if (row == board.lenght) {
+        if (row == board.length) {
             printBoard(board);
             return;
         }
         // column loop
         for (int j = 0; j < board.length; j++) {
             if(isSafe(board, row, j)){
-                board[row][j] == 'Q';
+                board[row][j] = 'Q';
                 nQueen(board, row+1); //function call 
                 board[row][j] = 'X'; //backtrack step
             }
