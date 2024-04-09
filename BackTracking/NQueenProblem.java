@@ -32,10 +32,10 @@ public class NQueenProblem {
         }
         // column loop
         for (int j = 0; j < board.length; j++) {
-            if(isSafe(board, row, j)){
+            if (isSafe(board, row, j)) {
                 board[row][j] = 'Q';
-                nQueen(board, row+1); //function call 
-                board[row][j] = 'X'; //backtrack step
+                nQueen(board, row + 1); // function call
+                board[row][j] = 'X'; // backtrack step
             }
         }
     }
@@ -51,7 +51,7 @@ public class NQueenProblem {
     }
 
     public static void main(String[] args) {
-        int n = 4;
+        int n = 5;
         char board[][] = new char[n][n];
         // initialize
         for (int i = 0; i < n; i++) {
