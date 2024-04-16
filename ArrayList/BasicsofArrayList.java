@@ -25,6 +25,9 @@ public class BasicsofArrayList {
         System.out.println(List);//[14, 100, 1, 2, 5]
         //5th Size operation
         System.out.println(List.size());//5
+        //6th Clear operation
+        List.clear();
+        System.out.println(List);//[]
     }
     
 }
