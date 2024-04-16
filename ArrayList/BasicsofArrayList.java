@@ -23,7 +23,8 @@ public class BasicsofArrayList {
         //4th Set operation
         List.set(2, 100);
         System.out.println(List);//[14, 100, 1, 2, 5]
-        
+        //5th Size operation
+        System.out.println(List.size());//5
     }
     
 }
