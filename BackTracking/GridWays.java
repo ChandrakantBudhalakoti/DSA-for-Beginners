@@ -1,4 +1,4 @@
-package BackTracking;
+// package BackTracking;
 
 public class GridWays {
     public static int gridWays(int i, int j, int n, int m) {

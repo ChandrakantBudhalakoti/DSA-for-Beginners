@@ -1,4 +1,4 @@
-package BackTracking;
+// package BackTracking;
 
 public class NQueenPrint1Solution {
     public static boolean isSafe(char board[][], int row, int col) {

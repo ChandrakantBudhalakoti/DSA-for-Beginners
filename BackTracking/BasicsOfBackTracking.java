@@ -1,4 +1,4 @@
-package BackTracking;
+// package BackTracking;
 
 public class BasicsOfBackTracking {
     /* WAP for changing arrays values by 2 using backtracking */

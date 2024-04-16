@@ -1,4 +1,4 @@
-package BackTracking;
+// package BackTracking;
 
 public class NQueenCountWays {
     public static boolean isSafe(char board[][], int row, int col) {

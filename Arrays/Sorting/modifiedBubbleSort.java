@@ -1,7 +1,7 @@
 package Sorting;
 
-public class ModifiedBubbleSort {
-    public static void modifiedBubbleSort(int[] arr) {
+public class modifiedBubbleSort {
+    public static void ModifiedBubbleSort(int[] arr) {
         for (int turn = 0; turn < arr.length - 1; turn++) {
             boolean swapped = false;
             for (int j = 0; j < arr.length - 1 - turn; j++) {
@@ -20,7 +20,7 @@ public class ModifiedBubbleSort {
     }
     public static void main (String[] args){
         int[] arr = { 5, 4, 1, 3, 2 };
-        modifiedBubbleSort(arr);
+        ModifiedBubbleSort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }

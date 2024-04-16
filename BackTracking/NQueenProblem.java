@@ -1,4 +1,4 @@
-package BackTracking;
+// package BackTracking;
 
 public class NQueenProblem {
     // all possible combination for queens safe location
