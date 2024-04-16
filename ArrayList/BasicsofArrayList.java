@@ -20,6 +20,10 @@ public class BasicsofArrayList {
         //3rd Remove operation
         List.remove(3);
         System.out.println(List);//[14, 1, 2, 5]
+        //4th Set operation
+        List.set(2, 100);
+        System.out.println(List);//[14, 100, 1, 2, 5]
+        
     }
     
 }
