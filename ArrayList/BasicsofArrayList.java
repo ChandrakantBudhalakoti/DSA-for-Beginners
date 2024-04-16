@@ -28,6 +28,12 @@ public class BasicsofArrayList {
         //6th Clear operation
         List.clear();
         System.out.println(List);//[]
+        //7th Contain operation
+        System.out.println(List.contains(100));//true
+        //8th Iterator operation
+        for (int i : List) {
+            System.out.print(i + " ");
+        }//14 1 100 4 5  
     }
     
 }
