@@ -14,7 +14,10 @@ public class BasicsofArrayList {
         //Add at specific position 
         List.add(0, 14);
         System.out.println(List);
-
+        //2nd Get operation
+        int element = List.get(2);
+        System.out.println(element);//2
+        
     }
     
 }
