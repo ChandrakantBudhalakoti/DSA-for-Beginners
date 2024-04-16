@@ -17,7 +17,9 @@ public class BasicsofArrayList {
         //2nd Get operation
         int element = List.get(2);
         System.out.println(element);//2
-        
+        //3rd Remove operation
+        List.remove(3);
+        System.out.println(List);//[14, 1, 2, 5]
     }
     
 }
