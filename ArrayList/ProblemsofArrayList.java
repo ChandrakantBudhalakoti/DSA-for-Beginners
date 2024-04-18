@@ -26,7 +26,7 @@ public class ProblemsofArrayList {
             // }
             max = Math.max(max, List.get(i));
         }
-        System.out.println(max);
+        System.out.println("max element is: " + max);
         return max;
             
     }
@@ -39,7 +39,7 @@ public class ProblemsofArrayList {
         List.add(5);
         List.add(55);
         reverse(List);
-        // maxElement(List);
+        maxElement(List);
     }
 
 }
