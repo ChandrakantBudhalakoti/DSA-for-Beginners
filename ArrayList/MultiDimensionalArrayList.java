@@ -17,6 +17,15 @@ public class MultiDimensionalArrayList {
         mainList.add(list2);
         mainList.add(list3);
         System.out.println(mainList);
+
+        //nested loop for print speratly 
+        for(int i = 0; i< mainList.size(); i++){
+            ArrayList<Integer>currList = mainList.get(i);
+            for(int j = 0; j<currList.size(); j++){
+                System.out.print(currList.get(j) + " ");
+            }
+            System.out.println();
+        }
     }
 
 }
